@@ -1,0 +1,123 @@
+<main>
+    <div class="bg-[url(/img/Efecto_planeta.png)] bg-cover bg-top h-[148vh]">
+        <!-- Header -->
+        <header class="flex flex-col justify-center items-center text-center pt-64">
+            <h1 class="leading-none">SIMULACIÓN <br/> SATELITAL</h1>
+            <span class="text-[#BFBCDB] text-[16px] py-2">Simulación de un sistema satelital para monitorizar datos desde el espacio.</span>
+            <div class="mt-182">
+                <button class="bg-black border-1 border-purple-300/60 rounded-full w-72 h-20"></button>
+                <p class="tracking-wide pt-4">Visita el <span class="text-[#FF6F3C]">GitHub</span> para descubrir el proyecto completo</p>
+            </div>
+        </header>
+    </div>
+    <div class="lg:px-[120px] sm:px-[64px] px-[28px]">
+        <!-- CONTENEDOR 1 - Sobre el Proyecto -->
+        <!------------------------------------------------------------------------------------------------------------------------>
+        <div class="xl:px-[48px]">
+            <div class="w-full">
+                <h2 class="text-center">Sobre el Proyecto</h2>
+            </div>
+            <!------->
+            <div class="flex xl:flex-row flex-col justify-center xl:items-center items-start py-[42px]">
+                <div class="xl:w-2/5">
+                    <img class="w-full xl:pb-0 pb-[24px]" src="/img/satelite_simulado_img.png" alt="Satelite simulado">
+                </div>
+                <div class="xl:w-3/5 xl:pl-[42px] text-left">
+                    <h4 class="pb-3 font-bold">Satélite simulado</h4>
+                    <p>El satélite simulado representa un sistema embarcado basado en Arduino que se encarga de la recogida de datos y la captura de imágenes. 
+                    Está equipado con sensores de temperatura, humedad y distancia, así como con una cámara digital, lo que le permite simular las funciones básicas 
+                    de un satélite de observación.</p><br>
+                    <p>Este sistema transmite la información recopilada a la estación de tierra mediante comunicación inalámbrica LoRa, utilizando protocolos que garantizan 
+                    la integridad de los datos. Además, es capaz de recibir comandos desde tierra, simulando el control remoto de un satélite en órbita.</p>
+                </div>
+            </div>
+            <!------->
+            <div class="flex xl:flex-row flex-col justify-center xl:items-center items-start py-[42px]">
+                <div class="xl:w-2/5 xl:hidden block">
+                    <img class="w-full xl:pb-0 pb-[24px]" src="/img/estacion_tierra_img.png" alt="Satelite simulado">
+                </div>
+                <div class="xl:w-3/5 xl:pr-[42px] xl:text-right text-left">
+                    <h4 class="pb-3 font-bold">Estación de Tierra</h4>
+                    <p>La estación de tierra es el sistema encargado de recibir, procesar y visualizar la información enviada por el satélite simulado. 
+                    A través de una interfaz gráfica desarrollada en Python, permite al usuario monitorizar datos ambientales, observar la posición orbital 
+                    del satélite y gestionar la captura de imágenes.</p><br>
+                    <p>Además, la estación de tierra actúa como centro de control, ya que envía comandos al satélite para modificar su comportamiento, como ajustar la toma de datos o iniciar la captura de imágenes. De este modo, simula el funcionamiento real de una estación terrestre de control satelital.</p>
+                </div>
+                <div class="xl:w-2/5 xl:block hidden">
+                    <img class="w-full" src="/img/estacion_tierra_img.png" alt="Satelite simulado">
+                </div>
+            </div>
+        </div>
+        <!-- CIRCULOS-->
+        <div class="flex justify-center py-[24px]">
+            <div class="grid lg:grid-cols-4 grid-cols-2 xl:gap-32 lg:gap-18 sm:gap-32 gap-12">
+                <div class="w-fit">
+                    <div class="h-32 w-32 shadow-[0_0_12px_rgba(168,85,247,0.6)] rounded-full col-span-1"></div>
+                </div>
+                <div class="w-fit">
+                    <div class="h-32 w-32 shadow-[0_0_12px_rgba(168,85,247,0.6)] rounded-full col-span-1"></div>
+                </div>
+                <div class="w-fit">
+                    <div class="h-32 w-32 shadow-[0_0_12px_rgba(168,85,247,0.6)] rounded-full col-span-1"></div>
+                </div>
+                <div class="w-fit">
+                    <div class="h-32 w-32 shadow-[0_0_12px_rgba(168,85,247,0.6)] rounded-full col-span-1"></div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------>
+        <!-- CONTENEDOR 2 - Herramientas y Tecnologías -->
+        <!------------------------------------------------------------------------------------------------------------------------>
+        <div class="mt-10">
+            <div class="w-full">
+                <h2 class="text-center">Herramientas y Tecnologías</h2>
+            </div>
+            <div>
+                <div class="grid lg:grid-cols-[48%_4%_48%] grid-cols-1 h-100 pt-[24px]">
+                    <div class="col-span-1">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="col-span-1">
+                                <h4 class="font-bold">Arduino</h4>
+                                <p>Plataforma utilizada como base del sistema satelital. Permite conectar sensores, la cámara y los módulos de comunicación, ejecutando el código que controla la captura y transmisión de datos.</p>
+                            </div>
+                            <div class="col-span-1">
+                                <h4 class="font-bold">LoRa</h4>
+                                <p>Tecnología de comunicación inalámbrica de largo alcance y bajo consumo. Se utiliza para transmitir datos e imágenes entre el satélite y la estación de tierra, simulando un enlace satelital real.</p>
+                            </div>
+                            <div class="col-span-1">
+                                <h4 class="font-bold">Librerías de Python</h4>
+                                <p>Conjunto de librerías utilizadas para el procesamiento y visualización de datos. Permiten generar gráficos, representar la órbita del satélite, gestionar imágenes y facilitar la comunicación con el hardware.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="flex justify-center">
+                            <div class="lg:w-px lg:h-100 h-px w-120 lg:my-[0px] my-[42px] bg-gray-300 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="col-span-1">
+                                <h4 class="font-bold">Python</h4>
+                                <p>Se utiliza para desarrollar la estación de tierra y la interfaz gráfica. Permite recibir y procesar los datos del satélite, visualizar la órbita y los sensores, y gestionar la captura y visualización de imágenes.</p>
+                            </div>
+                            <div class="col-span-1">
+                                <h4 class="font-bold">C</h4>
+                                <p>Se utiliza para programar el Arduino del satélite y la estación de tierra. Controla los sensores, la cámara y la comunicación LoRa, gestionando la captura y el envío de datos de forma eficiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------>
+        <div class="pt-64">
+            <!--
+            <div>
+                <h2>Instalación y funcionamiento</h2>
+            </div> -->
+        </div>
+    </div>
+    <app-footer></app-footer>
+</main>
+

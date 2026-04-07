@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('./assets/fonts/inter/Inter_24pt-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('./assets/fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  overflow-y: scroll;
+}
+
+
+body{
+    background-color: #03010F;
+    /* background-color: #2e2757; */
+}
+
+h1{
+    color: #EBE9FC;
+    font-family: 'Montserrat-Light';
+    font-size: 64px;
+}
+
+h2{
+    color: #EBE9FC;
+    font-family: 'Montserrat-Light';
+    font-size: 40px;
+}
+
+h4{
+    color: #EBE9FC;
+    font-family: 'Montserrat-Light';
+    font-size: 24px;
+}
+
+span{
+    font-family: 'Inter-Light';
+}
+
+p{
+    color: #EBE9FC;
+    font-family: 'Inter-Light';
+    font-size: 16px;
+}
+
+a{
+    font-family: 'Inter-Light';
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+footer a{
+  font-family: 'Inter-Light';
+  letter-spacing: 1px;
+  font-size: 16px;
+}

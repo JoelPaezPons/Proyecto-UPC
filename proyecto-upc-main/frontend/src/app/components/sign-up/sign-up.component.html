@@ -1,0 +1,63 @@
+<div class="flex items-center justify-center min-h-screen p-4 pt-32">
+  <div class="flex flex-col md:flex-row w-full max-w-[1000px] min-h-[550px] rounded-[20px] overflow-hidden shadow-[0_32px_64px_rgba(0,0,0,0.55),0_8px_24px_rgba(0,0,0,0.35)] border border-white/10">
+
+    <!-- Lado izquierdo -->
+    <div class="flex-1 bg-[#161426] flex flex-col justify-center p-12 relative overflow-hidden">
+      <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#4F6AF5] opacity-10 rounded-full blur-3xl"></div>
+      <h1 class="text-white font-['Montserrat-Light'] text-5xl mb-4 leading-tight">¿Ya tienes cuenta?</h1>
+      <p class="text-white/60 font-['Inter-Light'] text-sm leading-relaxed mb-8 max-w-[260px]">
+        Inicia sesión con tus datos y continúa explorando el universo con nosotros.
+      </p>
+      <a routerLink="/sign-in"
+        class="inline-flex items-center justify-center w-fit px-8 py-2.5 rounded-full border border-white/30 text-white font-['Montserrat-Light'] text-xs tracking-[2px] uppercase transition-all hover:border-[#F57C35] hover:bg-[#F57C35]/10">
+        Iniciar Sesión
+      </a>
+    </div>
+
+    <!-- Lado derecho -->
+    <div class="flex-[1.2] bg-[#0B091A] flex flex-col justify-center p-12 border-t md:border-t-0 md:border-l border-white/5 relative">
+      <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,rgba(79,106,245,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+
+      <div class="relative">
+        <h2 class="text-white font-['Montserrat-Light'] text-2xl uppercase tracking-[0.18em] mb-10">
+          Crear Cuenta
+          <span class="block w-9 h-[2px] bg-[#4F6AF5] mt-2"></span>
+        </h2>
+
+        <form (ngSubmit)="onSubmit()" novalidate class="space-y-5">
+          <div class="flex flex-col gap-2">
+            <label class="text-white/50 font-['Montserrat-Light'] text-[10px] tracking-[0.15em] uppercase">Nombre</label>
+            <input type="text" [(ngModel)]="name" name="name" placeholder="Tu nombre"
+              class="bg-[#1A1830] border border-[#2A2845] rounded-[10px] px-4 py-3 text-white font-['Inter-Light'] text-sm outline-none transition-all focus:border-[#4F6AF5] focus:ring-2 focus:ring-[#4F6AF5]/20 placeholder:text-white/20" />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-white/50 font-['Montserrat-Light'] text-[10px] tracking-[0.15em] uppercase">Correo Electrónico</label>
+            <input type="email" [(ngModel)]="email" name="email" placeholder="usuario@ejemplo.com"
+              class="bg-[#1A1830] border border-[#2A2845] rounded-[10px] px-4 py-3 text-white font-['Inter-Light'] text-sm outline-none transition-all focus:border-[#4F6AF5] focus:ring-2 focus:ring-[#4F6AF5]/20 placeholder:text-white/20" />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-white/50 font-['Montserrat-Light'] text-[10px] tracking-[0.15em] uppercase">Contraseña</label>
+            <input type="password" [(ngModel)]="password" name="password" placeholder="••••••••"
+              class="bg-[#1A1830] border border-[#2A2845] rounded-[10px] px-4 py-3 text-white font-['Inter-Light'] text-sm outline-none transition-all focus:border-[#4F6AF5] focus:ring-2 focus:ring-[#4F6AF5]/20 placeholder:text-white/20" />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label class="text-white/50 font-['Montserrat-Light'] text-[10px] tracking-[0.15em] uppercase">Confirmar Contraseña</label>
+            <input type="password" [(ngModel)]="password_confirmation" name="password_confirmation" placeholder="••••••••"
+              class="bg-[#1A1830] border border-[#2A2845] rounded-[10px] px-4 py-3 text-white font-['Inter-Light'] text-sm outline-none transition-all focus:border-[#4F6AF5] focus:ring-2 focus:ring-[#4F6AF5]/20 placeholder:text-white/20" />
+          </div>
+
+          <p *ngIf="error" class="text-red-400 text-xs">{{ error }}</p>
+
+          <button type="submit"
+            class="w-full mt-4 py-3.5 rounded-full bg-gradient-to-r from-[#4F6AF5] to-[#8A63D2] text-white font-['Montserrat-Light'] font-semibold text-xs tracking-widest uppercase shadow-[0_4px_20px_rgba(79,106,245,0.35)] transition-transform hover:-translate-y-0.5 active:translate-y-0">
+            REGISTRARME
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

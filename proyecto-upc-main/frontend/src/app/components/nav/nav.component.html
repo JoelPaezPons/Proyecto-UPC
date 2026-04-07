@@ -1,0 +1,33 @@
+<nav class="w-full flex justify-center py-10 fixed z-50">
+    <!-- <div class="absolute left-0 top-0 px-25 pt-5">
+        <img class="w-full" src="/img/Logo_Satellite.png" alt="logo_satellite">
+    </div> -->
+    <div
+        class="flex relative items-center justify-between md:w-2/3 xl:w-2/4 w-[500px] px-10 py-6 rounded-full border border-purple-600/30 backdrop-blur-md shadow-[0_0_14px_rgba(175,141,250,0.8)]">
+        <a routerLink="/home" routerLinkActive="text-purple-300 font-bold"
+            class="text-[#EBE9FC] hover:text-purple-300 hover:[text-shadow:0_0_30px_rgb(196,181,253,1)] transition">Home</a>
+        <a routerLink="/satellite" routerLinkActive="text-purple-300 font-bold"
+            class="text-[#EBE9FC] hover:text-purple-300 hover:[text-shadow:0_0_30px_rgb(196,181,253,1)] transition">Satélites</a>
+        <a routerLink="/about-us" routerLinkActive="text-purple-300 font-bold"
+            class="text-[#EBE9FC] hover:text-purple-300 hover:[text-shadow:0_0_30px_rgb(196,181,253,1)] transition">Sobre
+            nosotros</a>
+
+        @if(!authService.isLoggedIn()) {
+        <a routerLink="/sign-in" routerLinkActive="text-purple-300 font-bold"
+            class="text-[#EBE9FC] hover:text-purple-300 hover:[text-shadow:0_0_30px_rgb(196,181,253,1)] transition">
+            Iniciar sesión
+        </a>
+        }
+
+        @if(authService.isLoggedIn()) {
+        <a href="/backoffice"
+            class="cursor-pointer text-[#EBE9FC] hover:text-purple-300 hover:[text-shadow:0_0_30px_rgb(196,181,253,1)] transition">
+            Backoffice
+        </a>
+        <a (click)="logout()"
+            class="cursor-pointer text-[#EBE9FC] hover:text-purple-300 hover:[text-shadow:0_0_30px_rgb(196,181,253,1)] transition">
+            Cerrar sesión
+        </a>
+        }
+    </div>
+</nav>

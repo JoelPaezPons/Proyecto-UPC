@@ -1,0 +1,75 @@
+<div class="pt-32">
+  <h1 class="text-4xl font-bold text-center my-10">Portada Satélites</h1>
+  @if(!authService.isLoggedIn()) {
+  <div class="text-center py-12 px-6 bg-[#1a1a1a] border border-yellow-500/20 rounded-2xl my-10 max-w-xl mx-auto">
+    <h2 class="text-2xl font-bold text-yellow-500 mb-4">Conexión Requerida</h2>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      Para poder visualizar los satelites y poder gestionar tus satélites favoritos, es necesario validar tus credenciales
+      de acceso.
+    </p>
+    <div class="flex justify-center gap-4">
+      <span class="text-sm text-yellow-500/50 uppercase tracking-widest">Inicia sesión para continuar</span>
+    </div>
+  </div>
+  }
+
+  @if(authService.isLoggedIn()) {
+  <div class="container mx-auto w-full px-5">
+
+    @if (listaFavoritos.length > 0) {
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-6">Mis Favoritos ⭐</h2>
+      <div class="flex flex-wrap w-full gap-6 justify-center p-6 rounded-xl"
+        style="background-color: #1a1a1a; border: 1px dashed #ffd700;">
+
+        @for (sat of listaFavoritos; track $index) {
+        <div class="card w-[25rem]" [id]="sat.id" (click)="removeFavorite(sat.id)">
+          <img [src]="sat.photo" class="w-full h-64 object-cover">
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">{{ sat.name }}</h3>
+            <button class="mt-2 text-red-500 hover:text-red-400">
+              Quitar de favoritos
+            </button>
+          </div>
+        </div>
+        }
+
+      </div>
+    </div>
+    }
+
+    <h2 class="text-3xl font-bold text-center mb-8">Todos los Satélites</h2>
+
+    <div class="flex flex-wrap w-full gap-8 justify-center">
+
+
+
+
+      @for (sat of listaSatellite; track $index) {
+      <div class="card w-[25rem] bg-[#111] rounded-lg overflow-hidden border border-gray-800" [id]="sat.id"
+        (click)="addFavoriteSatellite(sat.id)">
+        <img [src]="sat.photo" class="w-full h-72 object-cover">
+
+        <div class="flex justify-between items-center p-6">
+          <div>
+            <h3 class="text-xl font-bold text-yellow-500">{{ sat.name }}</h3>
+          </div>
+
+          <button class="btn-estrella">
+            <span class="material-icons text-3xl">star_border</span>
+          </button>
+        </div>
+      </div>
+      }
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+  }
+</div>

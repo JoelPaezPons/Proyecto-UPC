@@ -1,0 +1,51 @@
+.card {
+  border: 1px solid #333; /* Un borde más oscuro para que pegue con el fondo negro */
+  border-radius: 12px;
+  background-color: #1a1a1a; /* Un gris muy oscuro para que resalte sobre el negro */
+  overflow: hidden; /* Importante para que la imagen no se salga de las esquinas redondeadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+/* Efecto al pasar el ratón */
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Estilo de la imagen */
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Estilos del texto */
+h1, h2 {
+  text-align: center;
+  color: #f9f9f9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+p {
+  color: #ccc;
+}
+
+/*Botón de estrella*/
+.btn-estrella {
+  background: none;
+  border: none;
+  color: #ffd700;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-estrella:hover {
+  transform: scale(1.3);
+}
